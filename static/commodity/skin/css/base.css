@@ -1,0 +1,194 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: "微软雅黑";
+	-webkit-overflow-scrolling: touch;
+}
+
+em,
+i,
+strong {
+	font-style: normal;
+}
+
+strong {
+	font-weight: normal;
+}
+
+body {
+	line-height: 1.5;
+	font-size: 14px;
+	background-color: #FFFFFF;
+}
+
+div,
+p,
+li,
+ul {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+ul,
+li,
+p,
+input {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+img {
+	vertical-align: bottom;
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+input,
+button {
+	outline: none;
+	border: 0px;
+	background-color: transparent;
+	font-size: 14px;
+}
+
+input::-webkit-input-placeholder {
+	color: #999999
+}
+
+input::input-placeholder {
+	color: #999999
+}
+
+textarea::-webkit-input-placeholder {
+	color: #999999
+}
+
+textarea::input-placeholder {
+	color: #999999
+}
+
+[v-cloak] {
+	display: none;
+}
+
+label {
+	color: #333333;
+}
+
+span {
+	color: #999999;
+}
+
+img {
+	object-fit: cover;
+}
+
+.hide {
+	display: none !important;
+}
+
+
+/*头部*/
+
+.base-headBox {
+	width: 100%;
+	height: auto;
+	background-color: #FFFFFF;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 5;
+	color: #333333;
+	padding-top: 20px;
+}
+
+.base-headBox>.base-head {
+	width: 100%;
+	height: auto;
+	position: relative;
+	text-align: center;
+}
+
+.base-headBox>.base-head>span,
+.base-head>div {
+	height: 60px;
+}
+
+.base-headBox>.base-head>span.base-Return {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: 2;
+	display: inline-flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	padding: 0px 20px;
+	font-size: 20px;
+	font-weight: bold;
+	color: #333333;
+}
+
+.base-headBox>.base-head>span.base-Return>i {
+	font-size: 25px;
+}
+
+.base-headBox>.base-head>.base-text {
+	width: 100%;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	font-size: 18px;
+	font-weight: bold;
+	margin: auto;
+}
+
+.base-headBox>.base-head>span.base-right {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	z-index: 2;
+	display: inline-flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	padding: 0px 20px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.base-headBox>.base-head>span.base-right>i {
+	font-size: 23px;
+}
+
+.base-headBox>.base-head>span.base-right>img {
+	width: 20px;
+	height: 20px;
+}
+
+.box{
+	width: 100%;
+	height: auto;
+	min-height: 100vh;
+	background-color: #FFFFFF;
+}
+/*数据加载提示*/
+
+.pullrefresh_tips{
+	width: 100%;
+	height: auto;
+	text-align: center;
+	line-height: 40px;
+	color: #999999;
+	font-size: 13px;
+}

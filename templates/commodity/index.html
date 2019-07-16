@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+{% load staticfiles %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'commodity/skin/css/base.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'commodity/skin/css/mui.min.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'commodity/skin/fonts/iconfont.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'commodity/skin/css/index.css' %}"/>
+    <script src="{% static 'commodity/skin/js/mui.min.js' %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% static 'commodity/skin/js/jquery-3.3.1.min.js' %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% static 'commodity/skin/js/vue.min.js/' %}" type="text/javascript" charset="utf-8"></script>
+    <title></title>
+</head>
+<body>
+<div id="app">
+    <div class="box">
+        <div class="loopImg" v-if="tap==1||tap==2">
+            <div id="slider" class="mui-slider">
+                <div class="mui-slider-group mui-slider-loop">
+                    <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+                    <div class="mui-slider-item mui-slider-item-duplicate">
+                        <img src="{% static 'commodity/skin/img/4ad20623ad02d4410f5201fc6f1b92d.png' %}"/>
+                    </div>
+                    <!-- 第一张 -->
+                    <div class="mui-slider-item">
+                        <img src="{% static 'commodity/skin/img/4ad20623ad02d4410f5201fc6f1b92d.png' %}"/>
+                    </div>
+                    <!-- 第二张 -->
+                    <div class="mui-slider-item">
+                        <img src="{% static 'commodity/skin/img/4ad20623ad02d4410f5201fc6f1b92d.png' %}"/>
+                    </div>
+                    <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+                    <div class="mui-slider-item mui-slider-item-duplicate">
+                        <img src="{% static 'commodity/skin/img/4ad20623ad02d4410f5201fc6f1b92d.png' %}"/>
+                    </div>
+                </div>
+                <div class="mui-slider-indicator">
+                    <div class="mui-indicator mui-active"></div>
+                    <div class="mui-indicator"></div>
+                </div>
+            </div>
+        </div>
+
+        <!--
+            作者：2648268870@qq.com
+            时间：2019-06-10
+            描述：轮播图
+        -->
+        <div class="ContentBox1" v-if="tap==1">
+            <div class="topCont">
+                <ul class="name">
+                    <li class="ct1">商品查询</li>
+                    <li class="ct2">查询</li>
+                </ul>
+                <form class="m-t" role="form" action="{% url 'user:check_commodity' %}{{ hash_code }}"
+                      method="post">
+                    <div class="searchCont">
+                        <input type="text" name="securityCode" placeholder="输入防伪认证码"/>
+                        <button type="submit">立即查询</button>
+                    </div>
+                </form>
+                <p class="tips">查询结果</p>
+                {% if message %}
+                    <p class="tips">{{ message }}</p>
+                {% endif %}
+            </div>
+
+            <div class="bottomCont">
+                <div class="Content">
+                    {% if data.status == 1 %}
+                        <div class="name">
+                            <label>商品参数</label>
+                        </div>
+                        <ul class="cont">
+                            <li class="ct1">商品名称：</li>
+                            <li class="ct2">{{ data.data.commodityName }}</li>
+                        </ul>
+                        <ul class="cont">
+                            <li class="ct1">商品属性：</li>
+                            <li class="ct2">{{ data.data.attributes }}</li>
+                        </ul>
+                        <ul class="cont">
+                            <li class="ct1">种类id：</li>
+                            <li class="ct2">{{ data.data.categoryId }}</li>
+                        </ul>
+                        <ul class="cont">
+                            <li class="ct1">价格：</li>
+                            <li class="ct2">{{ data.data.price }}</li>
+                        </ul>
+                        <ul class="cont">
+                            <li class="ct1">公司id：</li>
+                            <li class="ct2">{{ data.data.companyId }}</li>
+                        </ul>
+                    {% else %}
+
+                        <ul class="cont">
+                            <li class="ct1"></li>
+                            <li class="ct2">{{ data.msg }}</li>
+                        </ul>
+                    {% endif %}
+                    <img src="{% static 'commodity/skin/img/7d0023fb7322dd4f478afc905b8a181.png' %}"/>
+                </div>
+            </div>
+        </div>
+
+        <!--
+            作者：2648268870@qq.com
+            时间：2019-06-10
+            描述：商品信息
+        -->
+        <div class="ContentBox2" v-else-if="tap==2">
+            <div class="Content">
+                <div class="cont_list active">
+                    <div class="line">
+                        <span></span>
+                        <div></div>
+                    </div>
+                    <div class="cont">
+                        <div class="title">
+                            <label>原件质量检测</label>
+                            <span>收起<i class="iconfont iconupward"></i></span>
+                        </div>
+                        <div class="contBox">
+                            <ul class="ct">
+                                <li>作业时间：2019.03.10 10:21:49</li>
+                                <li>负责人：蒋蒋蒋</li>
+                                <li>检测原件：CUP</li>
+                                <li>检测数量：2300</li>
+                                <li>完成时间：2019.03.10 14:11:23</li>
+                                <li>记录状态：完成</li>
+                                <li>区块信息：点击查看<i class="iconfont iconnext"></i></li>
+                            </ul>
+                            <img src="{% static 'commodity/skin/img/c4a7ceb857310edcf5d72bbe955d2c1.png' %}"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="cont_list">
+                    <div class="line">
+                        <span></span>
+                        <div></div>
+                    </div>
+                    <div class="cont">
+                        <div class="title">
+                            <label>安装</label>
+                            <span>展开<i class="iconfont iconupward"></i></span>
+                        </div>
+                        <div class="contBox">
+                            <ul class="ct">
+                                <li>作业时间：2019.03.10 10:21:49</li>
+                                <li>负责人：蒋蒋蒋</li>
+                                <li>检测原件：CUP</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="cont_list">
+                    <div class="line">
+                        <span></span>
+                        <div></div>
+                    </div>
+                    <div class="cont">
+                        <div class="title">
+                            <label>包装</label>
+                            <span>展开<i class="iconfont iconupward"></i></span>
+                        </div>
+                        <div class="contBox">
+                            <ul class="ct">
+                                <li>作业时间：2019.03.10 10:21:49</li>
+                                <li>负责人：蒋蒋蒋</li>
+                                <li>检测原件：CUP</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--
+            作者：2648268870@qq.com
+            时间：2019-06-10
+            描述：溯源信息
+        -->
+        <div class="ContentBox3" v-else-if="tap==3">
+            <div class="Content1 hide">
+                <div class="cont">
+                    <input type="text" placeholder="姓名"/>
+                </div>
+                <div class="cont">
+                    <input type="text" placeholder="联系电话"/>
+                </div>
+                <div class="cont">
+                    <input type="text" placeholder="行业（服装、食品等）"/>
+                </div>
+                <div class="cont">
+                    <input type="text" placeholder="地区（省/市）"/>
+                </div>
+                <div class="btnContent">
+                    <button>提交申请</button>
+                </div>
+            </div>
+            <div class="Content2">
+                <img src="{% static 'commodity/skin/img/db1956742a150afd2ef4b4585181222.png' %}"/>
+                <p class="tips">入驻申请提交</p>
+                <p class="tips">管理员会与您取得联系</p>
+                <p class="tips">请耐心等待</p>
+            </div>
+        </div>
+        <!--
+            作者：2648268870@qq.com
+            时间：2019-06-10
+            描述：申请入驻
+        -->
+        <ul class="base_bottomContent">
+            <li :class="{'active':tap==1}" @tap="tap=1">
+                <i class="iconfont icondianyingpiao"></i>
+                <p>商品信息</p>
+            </li>
+            <li :class="{'active':tap==2}" @tap="tap=2">
+                <i class="iconfont icondingdan"></i>
+                <p>溯源信息</p>
+            </li>
+            <li :class="{'active':tap==3}" @tap="tap=3">
+                <i class="iconfont iconbianji"></i>
+                <p>商品信息</p>
+            </li>
+        </ul>
+    </div>
+    <!--
+        作者：2648268870@qq.com
+        时间：2019-06-10
+        描述：弹窗
+    -->
+    <div class="PopupContent hide">
+        <div class="PopupCont">
+            <div class="title">区块信息</div>
+            <ul class="cont">
+                <li>时间戳：</li>
+                <li>2019-06-09 11:54:21</li>
+            </ul>
+            <ul class="cont">
+                <li>发起方：</li>
+                <li>0xebb***dhiufwe4</li>
+            </ul>
+            <ul class="cont">
+                <li>协助方：</li>
+                <li>0xebb***dhiufwe4（智能合约）</li>
+            </ul>
+            <ul class="cont">
+                <li>区块编号：</li>
+                <li>5,964,412</li>
+            </ul>
+            <ul class="cont">
+                <li>存证节点：</li>
+                <li>0x71db***335dfswko</li>
+            </ul>
+            <ul class="cont">
+                <li>特征值：</li>
+                <li>0xhnf456484fdwafew4g0xhnf456484fdwafew4g0xhnf456484fdwafew4g</li>
+            </ul>
+            <ul class="cont">
+                <li>燃料费：</li>
+                <li>0.001 NOS</li>
+            </ul>
+            <div class="btnContent">
+                <button>知道了</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+    var app = new Vue({
+        el: "#app",
+        data: {
+            tap: 1,
+        },
+        mounted: function () {
+
+        },
+        methods: {},
+    })
+</script>

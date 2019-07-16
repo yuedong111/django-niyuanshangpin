@@ -1,0 +1,429 @@
+.box{
+	background-color: #F5F5F5;
+	padding-bottom: 55px;
+}
+.loopImg{
+	width: 100%;
+	height: auto;
+}
+.loopImg img{
+	width: 100%;
+	height: 180px;
+}
+.ContentBox1{
+	width: 100%;
+	height: auto;
+}
+.ContentBox1>.topCont{
+	width: 100%;
+	height: auto;
+	background-color: #FFFFFF;
+	padding: 0px 15px;
+}
+.ContentBox1>.topCont>ul.name{
+	width: 100%;
+	height: auto;
+	padding-top: 20px;
+	padding-bottom: 15px;
+}
+.ContentBox1>.topCont>ul.name>li{
+	width: 100%;
+	height: auto;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	text-align: center;
+}
+.ContentBox1>.topCont>ul.name>li.ct1{
+	color: #333333;
+	font-size: 15px;
+	font-weight: bold;
+}
+.ContentBox1>.topCont>ul.name>li.ct2{
+	color: #F25B5B;
+	font-size: 15px;
+	font-weight: bold;
+	padding-top: 5px;
+}
+.ContentBox1>.topCont>.searchCont{
+	width: 100%;
+	height: 35px;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: space-between;
+	border: 1px solid #2590FE;
+	
+}
+.ContentBox1>.topCont>.searchCont>input{
+	margin: 0px;
+	height: 100%;
+	width: calc(100% - 80px);
+	border-radius: 0px;
+	border: 0px;
+	font-size: 13px;
+	color: #333333;
+}
+.ContentBox1>.topCont>.searchCont>button{
+	height: 100%;
+	width: 80px;
+	background-color: #2590FE;
+	font-size: 12px;
+	color: #FFFFFF;
+	border: 0px;
+	border-radius: 0px;
+}
+.ContentBox1>.topCont>p.tips{
+	width: 100%;
+	height: auto;
+	color: #333333;
+	font-size: 12px;
+	text-align: center;
+	padding: 10px 0px;
+}
+.ContentBox1>.bottomCont{
+	padding: 20px 15px;
+}
+.ContentBox1>.bottomCont>.Content{
+	width: 100%;
+	height: auto;
+	background-color: #FFFFFF;
+	padding: 10px 15px;
+	position: relative;
+	margin-bottom: 50px;
+}
+.ContentBox1>.bottomCont>.Content>.name{
+	width: 100%;
+	height: auto;
+	text-align: center;
+	padding: 10px;
+}
+.ContentBox1>.bottomCont>.Content>.name label{
+	color: #999999;
+	font-size: 12px;
+	position: relative;
+}
+.ContentBox1>.bottomCont>.Content>.name label:before{
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: -35px;
+	width: 30px;
+	height: 1px;
+	background-color: #999999;
+	opacity: 0.5;
+}
+.ContentBox1>.bottomCont>.Content>.name label:after{
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: -35px;
+	width: 30px;
+	height: 1px;
+	background-color: #999999;
+	opacity: 0.5;
+}
+.ContentBox1>.bottomCont>.Content>.cont{
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: space-between;
+}
+.ContentBox1>.bottomCont>.Content>.cont>li{
+	color: #555555;
+	font-size: 13px;
+	line-height: 30px;
+	word-break: break-all;
+	word-wrap: break-word;
+}
+.ContentBox1>.bottomCont>.Content>.cont>li:first-child{
+	width: 150px;
+}
+.ContentBox1>.bottomCont>.Content>.cont>li:last-child{
+	text-align: right;
+}
+.ContentBox1>.bottomCont>.Content>img{
+	position: absolute;
+	bottom: -25px;
+	left: 0px;
+	width: 100%;
+	height: 30px;
+}
+
+.ContentBox2{
+	width: 100%;
+	height: auto;
+	padding: 20px 15px;
+}
+
+.ContentBox2>.Content{
+	width: 100%;
+	height: auto;
+	background-color: #FFFFFF;
+	padding: 10px 15px;
+}
+
+.ContentBox2>.Content>.cont_list{
+	width: 100%;
+	height: auto;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	position: relative;
+	padding-left: 25px;
+	padding-bottom: 20px;
+	overflow: hidden;
+}
+.ContentBox2>.Content>.cont_list>.line{
+	width: 14px;
+	height: 100%;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+}
+.ContentBox2>.Content>.cont_list>.line span{
+	display: inline-block;
+	border-radius: 50%;
+	height: 14px;
+	width: 14px;
+	background-color: #2590FE;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.ContentBox2>.Content>.cont_list>.line div{
+	width: 1px;
+	height: 100%;
+	border-left: 1px solid #2590FE;
+}
+.ContentBox2>.Content>.cont_list>.cont{
+	width: 100%;
+	height: auto;
+}
+.ContentBox2>.Content>.cont_list>.cont>.title{
+	width: 100%;
+	height: auto;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: space-between;
+	padding-bottom: 20px;
+}
+.ContentBox2>.Content>.cont_list>.cont>.title label{
+	color: #2590FE;
+	font-size: 15px;
+	font-weight: bold;
+}
+.ContentBox2>.Content>.cont_list>.cont>.title span{
+	color: #999999;
+	font-size: 12px;
+	display: inline-flex;
+	align-content: center;
+	align-items: center;
+}
+.ContentBox2>.Content>.cont_list>.cont>.title span .iconfont{
+	transform: rotate(180deg);
+	margin-left: 5px;
+}
+.ContentBox2>.Content>.cont_list.active>.cont>.title span .iconfont{
+	transform: rotate(0deg);
+}
+.ContentBox2>.Content>.cont_list>.cont>.contBox{
+	width: 100%;
+	height: 100px;
+	overflow: hidden;
+}
+.ContentBox2>.Content>.cont_list.active>.cont>.contBox{
+	height: auto;
+}
+.ContentBox2>.Content>.cont_list>.cont>.contBox img{
+	width: 100%;
+	height: auto;
+	margin-top: 5px;
+}
+.ContentBox2>.Content>.cont_list>.cont>.contBox ul.ct{
+	width: 100%;
+	height: auto;
+}
+.ContentBox2>.Content>.cont_list>.cont>.contBox ul.ct>li{
+	width: 100%;
+	height: auto;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: space-between;
+	color: #555555;
+	font-size: 13px;
+	line-height: 25px;
+}
+.ContentBox2>.Content>.cont_list>.cont>.contBox ul.ct>li .iconfont{
+	color: #999999;
+}
+.ContentBox3{
+	width: 100%;
+	height: auto;
+}
+.ContentBox3>.Content1{
+	width: 100%;
+	height: auto;
+}
+.ContentBox3>.Content1>.cont{
+	width: 100%;
+	height: auto;
+	background-color: #FFFFFF;
+	padding: 0px 15px;
+}
+.ContentBox3>.Content1>.cont>input{
+	width: 100%;
+	height: 58px;
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	font-size: 15px;
+	border-bottom: 1px solid #FAFAFA;
+	color: #333333;
+}
+.ContentBox3>.Content1>.cont:last-child>input{
+	border-bottom: 0px;
+}
+.ContentBox3>.Content1>.btnContent{
+	width: 100%;
+	height: auto;
+	padding: 35px 15px;
+}
+.ContentBox3>.Content1>.btnContent button{
+	width: 100%;
+	height: 42px;
+	background-color: #DE6363;
+	color: #FFFFFF;
+	border-radius: 20px;
+	border: 0px;
+	font-size: 15px;
+}
+.ContentBox3>.Content2{
+	width: 100%;
+	height: auto;
+	text-align: center;
+	padding: 80px 0px;
+}
+.ContentBox3>.Content2 img{
+	width: 150px;
+	margin-bottom: 30px;
+}
+.ContentBox3>.Content2 .tips{
+	width: 100%;
+	height: auto;
+	text-align: center;
+	color: #666666;
+	font-size: 15px;
+}
+
+.base_bottomContent{
+	width: 100%;
+	height: 55px;
+	overflow: hidden;
+	background-color: #FFFFFF;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: space-around;
+	border-top: 1px solid #E6E6E6;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	z-index: 10;
+	padding-top: 5px;
+}
+
+.base_bottomContent>li{
+	text-align: center;
+	color: #999999;
+}
+.base_bottomContent>li .iconfont{
+	display: inline-flex;
+	align-content: flex-end;
+	align-items: flex-end;
+	font-size: 22px;
+}
+.base_bottomContent>li p{
+	font-size: 11px;
+	margin: 0px;
+	color: #999999;
+	line-height: 14px;
+}
+.base_bottomContent>li.active{
+	color: #2590FE;
+}
+.base_bottomContent>li.active p{
+	color: #2590FE;
+}
+
+/*弹窗*/
+.PopupContent{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 20;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+}
+.PopupContent>.PopupCont{
+	width: 80%;
+	height: auto;
+	max-height: 80vh;
+	overflow: scroll;
+	background-color: #FFFFFF;
+	padding: 30px 15px;
+	border-radius: 5px;
+}
+.PopupContent>.PopupCont .title{
+	width: 100%;
+	height: auto;
+	color: #333333;
+	font-size: 15px;
+	font-weight: bold;
+	text-align: center;
+	padding-bottom: 20px;
+}
+.PopupContent>.PopupCont .cont{
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: space-between;
+	color: #555555;
+	font-size: 13px;
+	line-height: 30px;
+}
+.PopupContent>.PopupCont .cont li:first-child{
+	white-space: nowrap;
+	margin-right: 20px;
+}
+.PopupContent>.PopupCont .cont li:last-child{
+	word-break: break-all;
+	word-wrap: break-word;
+	text-align: right;
+	text-align: right;
+}
+.PopupContent>.PopupCont .btnContent{
+	width: 100%;
+	height: auto;
+	text-align: center;
+	padding-top: 20px;
+}
+.PopupContent>.PopupCont .btnContent button{
+	background-color: #2590FE;
+	width: 80%;
+	height: 42px;
+	color: #FFFFFF;
+	font-size: 15px;
+	border-radius: 5px;
+}
